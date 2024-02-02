@@ -48,14 +48,14 @@ class _DetailScreenState extends State<DetailScreen> {
               Text("댓글 ${widget.cat.replyCount}개"),
               ...List.generate(
                   replies.length,
-                  (int index) => const Padding(
-                        padding: EdgeInsets.only(top: 10.0),
+                  (int index) => Padding(
+                        padding: const EdgeInsets.only(top: 10.0),
                         child: Row(children: [
-                          Text("익명",
+                          const Text("익명",
                               style: TextStyle(fontWeight: FontWeight.bold)),
-                          Padding(
+                          const Padding(
                               padding: EdgeInsets.symmetric(horizontal: 3.0)),
-                          Text("댓글")
+                          Text(replies[index])
                         ]),
                       )),
               Padding(
